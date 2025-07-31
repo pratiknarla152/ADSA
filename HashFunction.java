@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HashFunction {
     
     static class HashTable {
@@ -64,27 +66,23 @@ public class HashFunction {
     }
 
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
        
         HashTable hashTable = new HashTable(10);
 
         
-        hashTable.insert("Pratik");
-        hashTable.insert("rice");
-        hashTable.insert("pulses");
-        hashTable.insert("milk");
-        hashTable.insert("bread");
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+
+        hashTable.insert(input);
+        
 
         
         hashTable.display();
 
-        String searchKey = "rice";
-        int index = hashTable.search(searchKey);
-        System.out.println("\nSearching for '" + searchKey + "': " +
-                (index != -1 ? "Found at index " + index : "Not found"));
 
-        searchKey = "eggs";
-        index = hashTable.search(searchKey);
-        System.out.println("Searching for '" + searchKey + "': " +
-                (index != -1 ? "Found at index " + index : "Not found"));
     }
 }
