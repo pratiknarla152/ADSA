@@ -1,4 +1,13 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
 public class BFS {
 
@@ -26,8 +35,8 @@ public class BFS {
     }
 
     public static void main(String[] args) {
-        
-        Map<Integer, List<Integer>> graph = new HashMap<>();
+       
+               Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(1, Arrays.asList(2, 3));
         graph.put(2, Arrays.asList(4, 5));
         graph.put(3, Arrays.asList(6));
@@ -39,3 +48,4 @@ public class BFS {
         System.out.println("BFS Traversal Order: " + traversalOrder);
     }
 }
+
